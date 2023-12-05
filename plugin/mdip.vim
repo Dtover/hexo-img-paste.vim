@@ -259,6 +259,6 @@ if exists('g:mdip_use_hexo') && g:mdip_use_hexo == 1
     let g:mdip_imgdir = expand('%:t:r')
     let g:mdip_imgdir_intext = g:mdip_imgdir
 endif
-if !exist('g:mdip_imgname_input')
+if !exists('g:mdip_imgname_input')
     let g:mdip_imgname_input = 1
 endif
