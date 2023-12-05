@@ -1,8 +1,12 @@
 # hexo-img-paste
 ## what's new
-add a variable named g:mdip_use_hexo, if set it to 1, the image will be save to the directory named with current file
+1. add a variable named g:mdip_use_hexo, if set it to 1, the image will be save to the directory named with current file
 ```vimscript
 let g:mdip_use_hexo = 1
+```
+2. add a variable named g:mdip_imgname_input, if set it to 0, you don't have to input a image name
+```vimscript
+let g:mdip_imgname_input = 0
 ```
 
 # img-paste.vim

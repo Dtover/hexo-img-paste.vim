@@ -210,9 +210,11 @@ function! mdip#MarkdownClipboardImage()
     while  1
         let workdir = s:SafeMakeDir()
         " change temp-file-name and image-name
-        let g:mdip_tmpname = s:InputName()
+        if(g:mdip_imgname_input == 1)
+            let g:mdip_tmpname = s:InputName()
+        endif
         if empty(g:mdip_tmpname)
-          let g:mdip_tmpname = g:mdip_imgname . '_' . s:RandomName()
+            let g:mdip_tmpname = g:mdip_imgname . '_' . s:RandomName()
         endif
         let testpath =  workdir . '/' . g:mdip_tmpname . '.png'
         if filereadable(testpath) == 0
@@ -256,4 +258,7 @@ if exists('g:mdip_use_hexo') && g:mdip_use_hexo == 1
     " use current filename as defult img directory
     let g:mdip_imgdir = expand('%:t:r')
     let g:mdip_imgdir_intext = g:mdip_imgdir
+endif
+if !exist('g:mdip_imgname_input')
+    let g:mdip_imgname_input = 1
 endif
