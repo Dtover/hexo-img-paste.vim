@@ -212,6 +212,8 @@ function! mdip#MarkdownClipboardImage()
         " change temp-file-name and image-name
         if(g:mdip_imgname_input == 1)
             let g:mdip_tmpname = s:InputName()
+        else
+            let g:mdip_tmpname = ""
         endif
         if empty(g:mdip_tmpname)
             let g:mdip_tmpname = g:mdip_imgname . '_' . s:RandomName()

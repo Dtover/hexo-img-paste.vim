@@ -57,11 +57,11 @@ autocmd FileType markdown,tex nmap <buffer><silent> <leader>p :call mdip#Markdow
                         '----'
 ```
 
-| Filetype | Function name | Content |
-|----------|---------------|---------|
-| Markdown | MarkdownPasteImage | `![Image](path)` |
-| Latex | LatexPasteImage | `\includegraphics{path} \caption{Image}` |
-| N/A  | EmptyPasteImage | `path` |
+| Filetype | Function name      | Content                                  |
+|----------|--------------------|------------------------------------------|
+| Markdown | MarkdownPasteImage | `![Image](path)`                         |
+| Latex    | LatexPasteImage    | `\includegraphics{path} \caption{Image}` |
+| N/A      | EmptyPasteImage    | `path`                                   |
 
 PRs welcome
 
