@@ -1,3 +1,10 @@
+# hexo-img-paste
+## what's new
+add a variable named g:mdip_use_hexo, if set it to 1, the image will be save to the directory named with current file
+```vimscript
+let g:mdip_use_hexo = 1
+```
+
 # img-paste.vim
 Yet simple tool to paste images into markdown files
 

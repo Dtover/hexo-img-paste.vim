@@ -178,11 +178,11 @@ function! s:InputName()
 endfunction
 
 function! g:MarkdownPasteImage(relpath)
-        execute "normal! i![" . g:mdip_tmpname[0:0]
-        let ipos = getcurpos()
-        execute "normal! a" . g:mdip_tmpname[1:] . "](" . a:relpath . ")"
-        call setpos('.', ipos)
-        execute "normal! vt]\<C-g>"
+    execute "normal! i![" . g:mdip_tmpname[0:0]
+    let ipos = getcurpos()
+    execute "normal! a" . g:mdip_tmpname[1:] . "](" . a:relpath . ")"
+    call setpos('.', ipos)
+    execute "normal! vt]\<C-g>"
 endfunction
 
 function! g:LatexPasteImage(relpath)
@@ -251,4 +251,8 @@ if !exists('g:mdip_tmpname')
 endif
 if !exists('g:mdip_imgname')
     let g:mdip_imgname = 'image'
+endif
+if exists('g:mdip_use_hexo') && g:mdip_use_hexo == 1
+    " use current filename as defult img directory
+    let g:mdip_imgdir = expand('%:t:r')
 endif
