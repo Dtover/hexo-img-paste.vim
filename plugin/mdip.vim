@@ -255,4 +255,5 @@ endif
 if exists('g:mdip_use_hexo') && g:mdip_use_hexo == 1
     " use current filename as defult img directory
     let g:mdip_imgdir = expand('%:t:r')
+    let g:mdip_imgdir_intext = g:mdip_imgdir
 endif
